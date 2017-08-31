@@ -1,0 +1,159 @@
+.preloader {
+    position: fixed;
+    z-index: 10000;
+    width: 100%;
+    height: 100%;
+    background-color: #f7e1b5;
+    opacity: 0.6;
+    -webkit-transition: 0.3s;
+    -o-transition: 0.3s;
+    transition: 0.3s;
+}
+
+.mic {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    margin-top: 20%;
+    background-color: #c5fffa;
+    border-radius: 50%;
+
+}
+
+.korpus {
+    top: 75px;
+    left: 80px;
+    position: absolute;
+    border: 3px solid black;
+    border-top: transparent;
+    border-bottom-width: 10px;
+    width: 40px;
+    height: 90px;
+    border-radius: 10%;
+    z-index: 10001;
+}
+
+.korpus:before {
+    content: "";
+    position: absolute;
+    border: 2px solid black;
+    top: 12px;
+    left: 12px;
+    right: 12px;
+    bottom: 50px;
+}
+
+.round1, .round1:before, .round1:after {
+    border: 3px solid transparent;
+    border-radius: 50%;
+    z-index: 10001;
+}
+
+.round1 {
+    top: 10px;
+    left: 65px;
+    position: absolute;
+    z-index: 10001;
+    width: 70px;
+    height: 70px;
+
+    border-top-color: deeppink;
+    border-bottom-color: deeppink;
+    border-left-color: deeppink;
+    -webkit-animation: spin 3s infinite linear;
+    animation: spin 3s infinite linear;
+    -webkit-transition: 0.3s;
+    -o-transition: 0.3s;
+    transition: 0.3s;
+}
+
+.round1:before, .round1:after {
+    content: "";
+    position: absolute;
+}
+
+.round1:before {
+    top: 10px;
+    left: 10px;
+    right: 10px;
+    bottom: 10px;
+    border-top-color: red;
+    border-bottom-color: darkred;
+    -webkit-animation: antispin 1.5s infinite linear;
+    animation: antispin 1.5s infinite linear;
+}
+
+.round1:after {
+    top: 20px;
+    left: 20px;
+    right: 20px;
+    bottom: 20px;
+    border-top-color: #ff701c;
+    -webkit-animation: antispin .9s infinite linear;
+    animation: antispin .9s infinite linear;
+}
+
+.loaded .preloader {
+    display: none;
+}
+
+@-webkit-keyframes spin {
+    from {
+        -webkit-transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    to {
+        -webkit-transform: rotate(360deg);
+        -ms-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+
+}
+
+@keyframes spin {
+    from {
+        -webkit-transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    to {
+        -webkit-transform: rotate(360deg);
+        -ms-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+
+}
+
+@-webkit-keyframes antispin {
+    from {
+        -webkit-transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    to {
+        -webkit-transform: rotate(-360deg);
+        -ms-transform: rotate(-360deg);
+        transform: rotate(-360deg);
+    }
+
+}
+
+@keyframes antispin {
+    from {
+        -webkit-transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    to {
+        -webkit-transform: rotate(-360deg);
+        -ms-transform: rotate(-360deg);
+        transform: rotate(-360deg);
+    }
+
+}
